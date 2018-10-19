@@ -19,15 +19,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests()
-                .anyRequest().authenticated().and()
-                .x509()
-                    .subjectPrincipalRegex("CN=(.*?)(?:,|$)")
-                    .userDetailsService(userDetailsService());
+                .anyRequest().authenticated()
+                .and()
+                    .x509()
+                        .subjectPrincipalRegex("CN=(.*?)(?:,|$)")
+                        .userDetailsService(userDetailsService());
     }
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return (UserDetailsService) username -> {
+        return username -> {
             if (username.equals("pavel")) {
                 return new User(username, "", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
             } else {
