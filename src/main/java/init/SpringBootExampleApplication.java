@@ -1,4 +1,4 @@
-package br.com.savasoft.exemplos.springbootexample;
+package init;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +20,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootExampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootExampleApplication.class, args);
+	    SpringApplication.run(SpringBootExampleApplication.class, args);
 	}
 
 }

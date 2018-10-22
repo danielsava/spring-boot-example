@@ -1,7 +1,7 @@
-package br.com.savasoft.exemplos.springbootexample.controller;
+package controller;
 
 
-import br.com.savasoft.exemplos.springbootexample.pojo.Customer;
+import model.Customer;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

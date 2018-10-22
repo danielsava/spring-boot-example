@@ -1,4 +1,4 @@
-package br.com.savasoft.exemplos.springbootexample.pojo;
+package model;
 
 public class Customer {
 
